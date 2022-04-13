@@ -1,0 +1,27 @@
+/*Write a Fibonacci series and print until 20 numbers*/
+
+
+//Initialize two variables
+Integer x = 0;
+Integer y = 1;
+
+//Create a list to store the values
+List<Integer> liste = new List<Integer>(20);
+Integer size = liste.size();
+
+//Add two values to the list
+liste.add(0,x);
+liste.add(1,y);
+
+//Initialize empty values to store from loop
+Integer sum;
+System.debug(liste);
+System.debug(liste.get(0));
+System.debug(liste.get(1));
+
+//for loop to get Fibonacci series
+for(Integer i = 0; i < size; i++) {
+	sum =  liste.get(i)+ liste.get(i+1); //0+1 = 1 //1+1 =2
+  liste.add(i+2,sum);    
+}
+System.debug(liste);
