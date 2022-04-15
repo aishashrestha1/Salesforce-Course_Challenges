@@ -1,0 +1,45 @@
+public class Fitness {
+
+    //initialize
+    Double weight;
+    Double height;   
+
+   //constructor   
+    public Fitness (Double weight, Double height){
+        this.weight = weight;
+        this.height = height;
+    }
+    
+         //Method calculateBMI    (Body Weight in kg)/Power two(Body height in Meter)
+    public Double getHeight(){
+       Double h = Math.pow(height,2);
+        return h;
+    }
+    
+     public Double getWeight(){
+       
+        return weight;
+    }
+    
+     //Method calculateBMI    (Body Weight in kg)/Power two(Body height in Meter)
+    public Double calculateBMI(){
+       //Integer h =  
+        return weight/Math.pow(height,2);
+    }
+    
+    
+ //Method CalculatePace (Distance in km)/(time in minues)   
+    public Integer calculateBMI(Integer distance, Integer times ){
+        Integer timesPerHour = times/60;
+        return distance/timesPerHour;
+    }
+}
+
+
+
+//Main class
+Fitness fit = new Fitness(256,4);
+//System.debug(fit.getHeight());
+//System.debug(fit.getWeight());
+System.debug('Total calculateBMI: ' + fit.calculateBMI());
+System.debug('Calculate BMI in km Per Hour: ' + fit.calculateBMI(1600,160));
