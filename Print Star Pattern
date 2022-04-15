@@ -1,0 +1,12 @@
+Integer n = 5;
+
+//Outer and Inner Loop
+for(Integer row =0; row < n; row++) {
+    String pattern ='';
+  //  System.debug('*');
+       for(Integer col =0; col <= row; col++) {
+       System.debug('*');
+           //pattern = pattern + '* ';
+ 	 }
+    System.debug(pattern);
+}
