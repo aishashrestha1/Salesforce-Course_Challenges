@@ -1,0 +1,19 @@
+public class PizzaBill {
+	  final Integer oneSlice = 8;
+	  final Integer twothirdSlice = 7;
+	  final Integer thirdSlice = 6;
+	
+  
+  //Method with Tenary Operator
+     public Integer splitTheBill(Integer numberOfOrder){
+      Integer result =  numberOfOrder == 1? numberOfOrder*oneSlice: numberOfOrder <= 3? numberOfOrder*twothirdSlice : numberOfOrder*thirdSlice;
+        return result;
+    }   
+}
+
+//Main Class
+
+PizzaBill p = new PizzaBill();
+System.debug('Ross Order 3 pizza and has to pay: '+ p.splitTheBill(3));
+System.debug('Chandler Order 1 pizza and has to pay: '+ p.splitTheBill(1));
+System.debug('Joey Order 4 pizza and has to pay: '+ p.splitTheBill(4));
