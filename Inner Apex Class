@@ -1,0 +1,46 @@
+public class Company {
+
+    public String companyName;
+    public String ceo;
+    public Integer employmeeCount;
+    public Long revenue;
+    
+    //List of all customers
+    private List<Customer> customers = new List<Customer>();
+    
+    //add new customer
+    public void addNewCustomer(String name,String website,String email,Long phone){
+        Customer c = new Customer(name,website,email,phone);
+        customers.add(c);
+    }
+    
+    
+    public void getAllCustomer(){
+        for(Customer c: customers){
+            System.debug('Client name is:'+ c.name +', Client Website: '+c.website +', Client Email: '+ c.email
+				+'Client Phone: '+c.phone);
+        }
+    }
+    //private inner class to store the customer information
+    private class Customer{
+        public String name;
+        public String website;
+        public String email;
+        public Long phone;
+        
+        Customer(String name,String website,String email,Long phone){
+            this.name = name; 
+            this.website = website;
+            this.email = email;
+            this.phone = phone;
+            
+        }
+    }
+    
+}
+
+//Main class
+Company com = new Company();
+com.addNewCustomer('Aisha','www.aishashrestha1.com','aishashrestha33@gmail.com',214-609-5520L);
+com.addNewCustomer('Darrell','www.darrellbowdon.com','darrellbowdon@gmail.com',512-921-2586L);
+com.getAllCustomer();
